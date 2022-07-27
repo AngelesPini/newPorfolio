@@ -1,0 +1,37 @@
+$amarillo1: #FFC002;
+$amarillo2: #FEF0AE;
+$font: 'Josefin Sans', sans-serif;
+
+header{
+    .title{
+    display: flex;        
+    font-family: $font;
+    text-align: end;
+    background-image: url(../assets/background-hero.jpg);
+    background-size: contain;
+    img{
+        width: 100%;
+        padding-top: 2vh; 
+        padding-left: 4vw;
+    }
+        .texto{
+            padding: 4vw;
+            color: $amarillo1;
+            margin-right: 3vw;
+            h1{
+                font-size: 4vw;
+            }
+            h4{
+                font-size: 3vw;
+            }
+            h5{
+                font-size: 2vw;
+            }
+            p{
+                font-size: 1.5vw;
+            }
+        }
+
+    }
+
+}

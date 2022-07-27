@@ -1,0 +1,367 @@
+$amarillo1: #FFC002;
+$amarillo2: #fef0ae;
+$font: 'Josefin Sans', sans-serif;
+
+ @mixin project{
+    display: flex;
+    box-shadow: 0px 20px 17px rgba(0, 0, 0, 0.25);
+    border-radius:50px;
+ }
+
+ @mixin hoverPorfolio{
+    position:absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius:50px ;
+ }
+
+ @mixin textosPorfolio{
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+    font-family: $font;
+    color: $amarillo2;
+    font-size: 2vw;
+ }
+ @mixin imgSize{
+
+    max-height: auto;
+    border-radius:50px ;
+    box-shadow: 0px 20px 17px rgba(0, 0, 0, 0.25);
+ }
+
+ @mixin grande{
+    height: 100%;
+    border-radius:50px;
+ }
+main{
+    section.first{
+        background-color: $amarillo2;
+        padding-bottom: 5vh;
+        .title{
+            width: 50%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $amarillo1;
+            justify-content: center;
+            box-shadow: 0px 20px 17px rgba(0, 0, 0, 0.50);
+            border-radius:0px 0px 160px 160px ;
+            margin-bottom: 5vh;
+            h2{
+                font-size: 5vw;
+                font-family: $font;
+                text-align: center;
+                margin: 10px;
+                color: #fff;
+            }
+        }
+
+        .projectsOne__porfolio{
+            display: flex;
+            justify-content: space-evenly;
+            .project{
+                @include project;
+                .item:hover{
+                    scale: none;
+                }
+                .div-imagen {
+                    display:inline-block;
+                    position:relative;
+                    border-radius:50px ;
+                    a{
+                        text-decoration: none;
+                    }
+
+                    img{
+                        max-width: 25vw;
+                        @include imgSize;
+                    }
+                  }
+                  .grande{
+                      width: 25vw;
+                      @include grande;
+                      p{
+                        display: inline-flex;
+                        margin-top: 2vh;
+                      }
+                  }
+                  .grande:hover{
+                   .este{
+                    @include hoverPorfolio;
+                  }
+                  .textos{
+                    @include textosPorfolio;
+                  }     
+                  }
+                  .textos{
+                      display: none;
+                      margin-top: 100%;
+                      margin-left: 10vw;
+                  }
+                  
+                  .div-imagen > div {
+                    position: absolute;
+                
+                  }
+            }
+        }
+        .projectsTwo__porfolio{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 5vh;
+            .project{
+                @include project;
+                height: fit-content;
+                width: fit-content;
+                .item:hover{
+                    scale: none;
+                }
+                .item{
+                    height: fit-content;
+                }
+                .div-imagen {
+                    display:inline-block;
+                    position:relative;
+                    border-radius:50px ;
+                    a{
+                        text-decoration: none;
+                    }
+
+                    img{
+                        max-width: 27vw;
+                        @include imgSize;
+                    }
+                  }
+                  .grande{
+                      width: 25vw;
+                      @include grande;
+                      p{
+                        display: inline-flex;
+                      }
+                  }
+                  .grande:hover{
+                   .este{
+                    position:absolute;
+                    opacity: 0.5;
+                    height: 100%;
+                    width: 108%;
+                    background-color: rgb(0, 0, 0);
+                    border-radius:50px;
+                  }
+                  .textos{
+                    @include textosPorfolio;
+                    margin-top: 50%;
+                  }     
+                  }
+                  .textos{
+                      display: none;
+                      margin-top: 80%;
+                      margin-left: 10vw;
+                  }
+                  
+                  .div-imagen > div {
+                    position: absolute;
+                
+                  }
+            }
+        }
+        .coop{
+            text-align: center;
+            margin-top: 6vh;
+            font-family: $font;
+            font-size: 1.5vw;
+            color: #000;
+            font-weight: 300;
+            a{
+                text-decoration: none;
+                color: $amarillo1;
+                font-weight: 600;
+            }
+        }
+
+    }
+    section.second{
+        background-color: #000;
+        padding-bottom: 5vh;
+        .title{
+            width: 50%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $amarillo1;
+            justify-content: center;
+            box-shadow: 0px 15px 17px rgba(254, 240, 174, 0.40);
+            border-radius:0px 0px 160px 160px ;
+            margin-bottom: 5vh;
+            h2{
+                font-size: 5vw;
+                font-family: $font;
+                text-align: center;
+                margin: 10px;
+                color: #fff;
+            }
+        }
+        .textosContain{
+            color: #fff;
+            font-family: $font;
+                text-align: center;
+        }
+        .boton{
+            border-radius: 10%;
+            width: 3vw;
+            height: 1vw;
+        }
+        .container{
+            font-family: $font;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 7vh;
+            .skill{
+                text-align: center;
+                svg{
+                    width: 60px;
+                    height: 60px;
+                }          
+                p{
+                    color: $amarillo2;
+                    animation-name: shadows;
+                    animation-iteration-count:infinite;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 3s;
+                    animation-delay: .3s;
+                }        
+                animation-name: moving;
+                animation-iteration-count:infinite;
+                animation-timing-function: ease-in-out;
+                animation-duration: 3s;
+                animation-delay: .3s;
+            }
+            .skill svg:hover{
+                box-shadow: 2px 2px 20px 15px rgba(255, 255, 255, 0.2);
+                border-radius: 10%;
+            }
+                @keyframes moving {
+                    0%{
+                        transform: rotate3d(12, 2, 4, 192deg);
+                        
+                    }
+                    25%{
+                        transform: rotate3d(1, 5, -4, 60deg);
+                    }
+                    50%{
+                        transform: rotate3d(1, 10, 1, 12deg);
+                    }
+                    65%{
+                        transform: rotate3d(6, 5, -3, 12deg);
+                    }
+                    75%{
+                        transform: rotate3d(7, -5, 3, 60deg);
+                    }
+                    85%{
+                        transform: rotate3d(1, 2, 1, 190deg);
+                    }
+                    100%{
+                        transform: rotate3d(12, 2, 4, 195deg);
+                    }
+                }
+                @keyframes shadows {
+                    0%{
+                        box-shadow: 2px 2px 20px 15px rgba(255, 255, 255, 0.2);
+                    }
+                    50%{
+                        box-shadow: 2px 2px 20px 15px rgba(189, 185, 185, 0.2);
+                    }
+                }
+                
+
+        }
+
+    }
+    section.third{
+        background-color: $amarillo1;
+        .title{
+            width: 50%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $amarillo1;
+            justify-content: center;
+            box-shadow: 0px 20px 17px rgba(0, 0, 0, 0.50);
+            border-radius:0px 0px 160px 160px ;
+            margin-bottom: 5vh;
+            h2{
+                font-size: 5vw;
+                font-family: $font;
+                text-align: center;
+                margin: 10px;
+                color: #fff;
+            }
+        }
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .box{
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                font-family: $font;
+                font-size: 2vw;
+                p{
+
+                    text-align: center;
+                }
+                span{
+                    font-size: 1.5vw;
+                    font-weight: 300;
+                    text-align: center;
+                    width: 40vw;
+                    display: flex;
+                    margin-top: -100px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            .one{
+                background-color: #000;
+                p{
+                    margin-right: 7vw;
+                    padding:9vw 5.5vw 8vw 4.5vw;
+                }
+            }
+            .two{
+                background-color:$amarillo1 ;
+                p{
+                    margin-left: 7vw;
+                    padding:9vw 5.5vw 8vw 6.5vw;
+                }
+            }
+            .three{
+             background-color:$amarillo1 ;
+             p{
+                margin-right: 7vw;
+                padding:6vw 1.5vw 8vw 3.5vw;
+             }
+            }
+            .four{
+                background-color: #000;
+                p{
+                    margin-left: 7vw;
+                    padding:6vw 6.5vw 8vw 6.5vw;
+                }
+            }
+        }
+        img{
+            position: absolute;
+            display: grid;
+            margin-left: 35%;
+            margin-right: 50%;
+            margin-top: -48%;
+            width: 30%;
+            padding-bottom: 0vh;
+        }
+
+    }
+}

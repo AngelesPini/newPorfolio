@@ -1,0 +1,34 @@
+$amarillo1: #FFC002;
+$amarillo2: #FEF0AE;
+$font: 'Josefin Sans', sans-serif;
+
+footer{
+    background-color: #000;
+    font-family: $font;
+    top: 100%;
+
+    color: #fff;
+    .todo{
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.5vw;
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            li{
+                list-style-type:none;
+                margin-left: 5vw;
+                display: flex;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+        
+                }
+            }
+
+        }
+    }
+
+}

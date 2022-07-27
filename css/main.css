@@ -428,11 +428,22 @@ footer .todo ul li a {
 }
 
 @media screen and (max-width: 768px) {
+  nav {
+    height: 80%;
+  }
   nav .links {
     justify-content: end;
     width: 85%;
     display: flex;
     align-self: center;
+    font-size: 3vw;
+  }
+  nav a {
+    font-size: 3vw;
+  }
+  nav .language {
+    font-size: 2vw;
+    margin-top: 3px;
   }
   header .foto {
     width: 30%;
@@ -606,7 +617,7 @@ footer .todo ul li a {
   main section.third .contenedor .three span {
     margin: 1vw 1vw 1vw 1vw;
     padding: 1vh 1vw 1vh 1vw;
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   main section.third .contenedor .four {
     background-color: #fef0ae;
@@ -624,11 +635,15 @@ footer .todo ul li a {
   footer .todo {
     display: flex;
     justify-content: space-around;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
+  }
+  footer .todo P {
+    display: none;
   }
   footer .todo ul {
     display: flex;
     justify-content: space-between;
+    padding-left: 0;
   }
   footer .todo ul li {
     list-style-type: none;
@@ -637,7 +652,7 @@ footer .todo ul li a {
     align-items: center;
   }
   footer .todo ul li img {
-    width: 10px;
+    width: 20px;
     height: auto;
   }
   footer .todo ul li a {
